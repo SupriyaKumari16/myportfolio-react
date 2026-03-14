@@ -7,18 +7,19 @@ import HealthCare from '../assets/HealthCare.png';
 
 const projects = [
   {
-  title: 'AuthenTrack',
-  description:
-    'AuthenTrack is a secure authentication and employee tracking system with login/signup, role-based access, and activity monitoring.',
-  status: 'Completed Project',
-  tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
-  github: 'https://github.com/yashch3101/AuthenTrack',
-  live: 'https://authentrack.kesug.com',
-  image: AuthenTrack,
-  direction: 'left',
-},
+    title: 'AuthenTrack',
+    description:
+      'AuthenTrack is a secure authentication and employee tracking system with login/signup, role-based access, and activity monitoring.',
+    status: 'Completed Project',
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
+    github: 'https://github.com/yashch3101/AuthenTrack',
+    live: 'https://authentrack.kesug.com',
+    image: AuthenTrack,
+    direction: 'left',
+  },
+
   {
-    title: 'MERN Stack Login/Signup with Authentication',
+    title: 'PCOD Care AI App',
     description:
       'Secure authentication system with signup/login and MongoDB backend using MERN stack.',
     status: 'Completed Project',
@@ -28,38 +29,29 @@ const projects = [
     image: HealthCare,
     direction: 'right',
   },
+
   {
-    title: 'News App',
+  title: 'Employee Management System',
+  description:
+    'Role-based employee management system where admin can assign tasks, track employee progress, and manage work status.',
+  status: 'Completed Project',
+  tech: ['React.js', 'JavaScript', 'CSS'],
+  github: 'https://github.com/SupriyaKumari16/Manage_System',
+  live: '#',
+  image: EMSImage,
+  direction: 'left',
+},
+
+  {
+    title: 'NextAuth Login Signup (MERN)',
     description:
-      'A React Native news application that fetches real-time news using NewsData API with category filters and bookmarking.',
+      'Authentication system with secure login and signup functionality using MERN stack and user session handling.',
     status: 'Completed Project',
-    tech: ['React Native', 'API', 'Expo'],
-    github: 'https://github.com/yourusername/news-app',
-    live: 'https://your-live-link.com',
-    image: EMSImage,
-    direction: 'left',
-  },
-  {
-    title: 'PCOD Care AI App',
-    description:
-      'AI-based health support application for PCOD patients including health tracking, AI chat assistance and wellness resources.',
-    status: 'Ongoing Project',
-    tech: ['React', 'AI', 'Tailwind CSS'],
-    github: 'https://github.com/yourusername/pcod-app',
-    live: 'https://your-live-link.com',
+    tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
+    github: 'https://github.com/SupriyaKumari16/next-auth',
+    live: '#',
     image: nextAuthImage,
     direction: 'right',
-  },
-  {
-    title: 'Plant Disease Detection App',
-    description:
-      'Mobile app to detect plant diseases using machine learning with camera-based image detection.',
-    status: 'Ongoing Project',
-    tech: ['React Native', 'Machine Learning', 'Python'],
-    github: 'https://github.com/yourusername/plant-disease-app',
-    live: 'https://your-live-link.com',
-    image: EMSImage,
-    direction: 'left',
   },
 ];
 
