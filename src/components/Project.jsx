@@ -1,28 +1,65 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaGlobe } from 'react-icons/fa';
 import EMSImage from '../assets/ems.jpg';
 import nextAuthImage from '../assets/next.auth.jpg';
+import AuthenTrack from '../assets/Authentrack.png';
+import HealthCare from '../assets/HealthCare.png';
 
 const projects = [
   {
-    title: 'Employee Management System',
-    description:
-      'A responsive web application to manage employees with features like add/edit/delete and localStorage-based login.',
-    status: 'Completed Project',
-    tech: ['React.js', 'Tailwind CSS', 'localStorage'],
-    github: 'https://github.com/SupriyaKumari16/Manage_System',
-    image: EMSImage,
-    direction: 'left',
-  },
+  title: 'AuthenTrack',
+  description:
+    'AuthenTrack is a secure authentication and employee tracking system with login/signup, role-based access, and activity monitoring.',
+  status: 'Completed Project',
+  tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
+  github: 'https://github.com/yashch3101/AuthenTrack',
+  live: 'https://authentrack.kesug.com',
+  image: AuthenTrack,
+  direction: 'left',
+},
   {
     title: 'MERN Stack Login/Signup with Authentication',
     description:
       'Secure authentication system with signup/login and MongoDB backend using MERN stack.',
     status: 'Completed Project',
     tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
-    github: 'https://github.com/SupriyaKumari16/next-auth',
+    github: 'https://github.com/SupriyaKumari16/pcod_healthcares',
+    live: 'https://pcod-healthcare.vercel.app/',
+    image: HealthCare,
+    direction: 'right',
+  },
+  {
+    title: 'News App',
+    description:
+      'A React Native news application that fetches real-time news using NewsData API with category filters and bookmarking.',
+    status: 'Completed Project',
+    tech: ['React Native', 'API', 'Expo'],
+    github: 'https://github.com/yourusername/news-app',
+    live: 'https://your-live-link.com',
+    image: EMSImage,
+    direction: 'left',
+  },
+  {
+    title: 'PCOD Care AI App',
+    description:
+      'AI-based health support application for PCOD patients including health tracking, AI chat assistance and wellness resources.',
+    status: 'Ongoing Project',
+    tech: ['React', 'AI', 'Tailwind CSS'],
+    github: 'https://github.com/yourusername/pcod-app',
+    live: 'https://your-live-link.com',
     image: nextAuthImage,
     direction: 'right',
+  },
+  {
+    title: 'Plant Disease Detection App',
+    description:
+      'Mobile app to detect plant diseases using machine learning with camera-based image detection.',
+    status: 'Ongoing Project',
+    tech: ['React Native', 'Machine Learning', 'Python'],
+    github: 'https://github.com/yourusername/plant-disease-app',
+    live: 'https://your-live-link.com',
+    image: EMSImage,
+    direction: 'left',
   },
 ];
 
@@ -35,6 +72,7 @@ const Project = () => {
       <h2 className="text-center text-5xl font-bold uppercase bg-gradient-to-r from-indigo-700 via-violet-600 to-rose-500 bg-clip-text text-transparent">
         My Projects
       </h2>
+
       <p className="text-center max-w-2xl mx-auto mt-4 font-bold text-pink-600">
         Some of my best projects with technologies used and links.
       </p>
@@ -47,37 +85,63 @@ const Project = () => {
               project.direction === 'right' ? 'md:flex-row-reverse' : ''
             }`}
           >
-            {/* Hanging Card Section */}
-            <div className="md:w-1/2 flex flex-col items-center  relative group transform rotate-[-3deg] hover:rotate-0 transition duration-500">
-              {/* Kill + Threads */}
-              <div className="absolute -top-9 z-20 flex flex-col  items-center">
-                <div className="w-5 h-5 bg-pink-700 rounded-full z-10 mb-0"></div>
+
+            {/* Hanging Card */}
+            <div className="md:w-1/2 flex flex-col items-center relative group transform rotate-[-3deg] hover:rotate-0 transition duration-500">
+
+              {/* Pin + Threads */}
+              <div className="absolute -top-9 z-20 flex flex-col items-center">
+                <div className="w-5 h-5 bg-pink-700 rounded-full z-10"></div>
+
                 <div className="relative w-0 h-0">
                   <div className="absolute -left-15 top-4 w-15 h-[1.5px] bg-indigo-600 -rotate-[30deg] origin-top-left" />
                   <div className="absolute -right-15 top-4 w-15 h-[1.5px] bg-indigo-600 rotate-[30deg] origin-top-right" />
                 </div>
               </div>
 
-              {/* Card (Image + White Box Together) */}
-              <div className="bg-white border-2 border-indigo-600 shadow-lg  rounded-2xl  p-3 w-full">
+              {/* Card */}
+              <div className="bg-white border-2 border-indigo-600 shadow-lg rounded-2xl p-3 w-full">
+
                 <div className="relative bg-gray-100 rounded-xl overflow-hidden">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
-                  >
-                    <FaGithub className="text-white text-6xl" />
-                  </a>
+
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center gap-8 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub className="text-white text-5xl hover:scale-110 transition" />
+                    </a>
+
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGlobe className="text-white text-5xl hover:scale-110 transition" />
+                    </a>
+
+                  </div>
+
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full rounded-xl transform group-hover:scale-105 group-hover:rotate-1 transition-all duration-500"
                   />
+
                 </div>
+
                 <div className="p-5">
-                  <p className="text-pink-500 text-m font-semibold mb-2">{project.status}</p>
-                  <h3 className="text-lg font-bold text-amber-600 mb-2">{project.title}</h3>
+                  <p className="text-pink-500 text-m font-semibold mb-2">
+                    {project.status}
+                  </p>
+
+                  <h3 className="text-lg font-bold text-amber-600 mb-2">
+                    {project.title}
+                  </h3>
+
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((item, i) => (
                       <span
@@ -89,22 +153,43 @@ const Project = () => {
                     ))}
                   </div>
                 </div>
+
               </div>
             </div>
 
-            {/* Right Text Side */}
+            {/* Right Text */}
             <div className="md:w-1/2">
-              <h3 className="text-2xl font-bold text-indigo-700 mb-2">{project.title}</h3>
-              <p className="text-red-900 mb-4 font-bold">{project.description}</p>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-br from-pink-200 via-pink-400 to-purple-600 text-gray-700 text-m font-semibold px-4 py-2 rounded-md hover:bg-red-200 shadow transform hover:scale-95 transition duration-200"
-              >
-                🔗 Click Me
-              </a>
+              <h3 className="text-2xl font-bold text-indigo-700 mb-2">
+                {project.title}
+              </h3>
+
+              <p className="text-red-900 mb-4 font-bold">
+                {project.description}
+              </p>
+
+              <div className="flex gap-4">
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-900 text-white px-4 py-2 rounded-md hover:scale-95 transition"
+                >
+                  Github
+                </a>
+
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:scale-95 transition"
+                >
+                  Live Demo
+                </a>
+
+              </div>
             </div>
+
           </div>
         ))}
       </div>
